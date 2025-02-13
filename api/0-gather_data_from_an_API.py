@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def get_todo_progress():
     emp_id = input("Enter employee ID: ")
     print(f"Fetching data for Employee {emp_id}...")
