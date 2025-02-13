@@ -35,6 +35,14 @@ def gather_data(employee_id):
 
 
 def employee_name(employee_id):
+    """Fetch employee name using their ID."""
+    url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        user_data = response.json()
+        return user_data.get('name', 'Unknown Employee')
+    else:
         return 'Unknown Employee'
 
 
